@@ -1,0 +1,30 @@
+{
+  "name": "ak-test-dms",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/http-client": "^3.2.0",
+    "@sap/cds": "^6",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "sqlite3": "^5"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "DMS": {
+        "kind": "rest",
+        "credentials": {
+          "destination": "DMS",
+          "requestTimeout": 30000
+        }
+      }
+    }
+  }
+}
